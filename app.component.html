@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-sccale=1.0">
+  <title>Shopping Cart</title>
+</head>
+<body>
+  <h2>My Shopping Cart</h2>
+  <p>Item count:<span id="itemcount">0</span></p>
+  <button onclick="addtoCart()">AddtoCart</button>
+  <button onclick="removeFromCart()">RemoveFromCart</button>
+  <script>
+let itemcount=0;
+function addtoCart(){
+	itemcount++;
+	document.getElementById("itemcount").textContent=itemcount;
+}
+function removeFromCart(){
+	if(itemcount>0){
+	itemcount--;
+	document.getElementById("itemcount").textContent=itemcount;
+}
+}
+  </script>
+</body>
+</html>
